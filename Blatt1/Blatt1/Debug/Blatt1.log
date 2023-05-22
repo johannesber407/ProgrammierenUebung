@@ -1,0 +1,4 @@
+﻿  Quelle.cpp
+C:\Users\jb\bwSyncShare\Studium\Programmieren\Blatt1\Blatt1\Quelle.cpp(8,9): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
+C:\Users\jb\bwSyncShare\Studium\Programmieren\Blatt1\Blatt1\Quelle.cpp(12,9): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
+  Blatt1.vcxproj -> C:\Users\jb\bwSyncShare\Studium\Programmieren\Blatt1\Debug\Blatt1.exe
