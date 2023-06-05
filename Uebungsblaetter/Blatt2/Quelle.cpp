@@ -4,6 +4,7 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+
 using namespace std;
 
 void a_4a() {
@@ -443,6 +444,61 @@ int aufgabe13() {
 	}
 	cout << endl << endl;
 }
+void aufgabe15() {
+
+}
+int value_of_roem(char c) {
+	if(c== 'M') {
+		return 1000;
+	}
+	else if( c== 'D') {
+		return 500;
+	}
+	else if (c == 'C') {
+		return 100;
+	}
+	else if (c == 'L') {
+		return 50;
+	}
+	else if (c == 'X') {
+		return 10;
+	}
+	else if (c == 'V') {
+		return 5;
+	}
+	else if (c == 'I') {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+void aufgabe16() {
+	cout << "Aufgabe 16; Roemische zu Arabisch" << endl;
+	cout << "Bitte geben sie eine roemische Zahl ein: ";
+	string s;
+	int len, res, temp;
+	cin >> s;
+	char* roem = &(s[0]);
+	len = strlen(roem);
+// To upper case
+	for (int i = 0; i <= len - 1; i++) {
+		roem[i] = toupper(roem[i]);
+	}
+	res = 0;
+	for (int i = 0; i <= len - 2; i++) {
+		if(value_of_roem(roem[i]) < value_of_roem(roem[i + 1])) {
+			res -= value_of_roem(roem[i]);
+		}
+		else {
+			res += value_of_roem(roem[i]);
+		}
+	}
+	res += value_of_roem(roem[len - 1]);
+	cout << "Die Zahl ist: " << res << endl;
+	
+	return;
+}
 
 int main() {
 	while (true) {
@@ -475,6 +531,13 @@ int main() {
 
 		case(13):
 			aufgabe13();
+			break;
+
+		case(15):
+			aufgabe15();
+			break;
+		case(16):
+			aufgabe16();
 			break;
 		}
 	}
