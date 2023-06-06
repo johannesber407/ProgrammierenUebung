@@ -4,6 +4,7 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include <fstream>
 
 using namespace std;
 
@@ -444,9 +445,113 @@ int aufgabe13() {
 	}
 	cout << endl << endl;
 }
-void aufgabe15() {
+int aufgabe15() {
+	int test;
+	string filename;
+	string pivot;
+	//einlesen
+	filename = "a15-spline-input.txt";
+	vector<vector<float>> data;
 
+	//float number;
+
+	ifstream input_file(filename);
+	if (!input_file.is_open()) {
+		cerr << "Could not open the file - '"
+			<< filename << "'" << endl;
+		return EXIT_FAILURE;
+	}
+
+	string line;
+	while (getline(input_file, line)) {
+		vector<float> row; // Individual row vector
+		istringstream iss(line);
+		float value;
+
+		while (iss >> value) {
+			row.push_back(value);
+		}
+		data.push_back(row);
+	}
+// Daten auspacken
+	const int size = data.size();
+	vector<float> x,y;
+	//x.push_back(0);
+	//y.push_back(0);
+	for (int i = 0; i <= data.size() - 1; i++) {
+		x.push_back(data[i][0]);
+		y.push_back(data[i][1]);
+	}
+
+	//Göeichungssystem aufstellen
+	vector<float> mu, lambda, d;
+	d.push_back(0);
+	lambda.push_back(0);
+	mu.push_back(0);
+	for (int i = 1; i <= x.size()-2; i++) {
+		lambda.push_back((x[i + 1] - x[i]) / (x[i + 1] - x[i - 1]));
+		mu.push_back((x[i] - x[i - 1]) / (x[i + 1] - x[i - 1]));
+		d.push_back((6/(x[i+1]-x[i-1]))*(((y[i + 1] - y[i]) / (x[i + 1] - x[i]))-((y[i] - y[i - 1]) / (x[i] - x[i - 1]))));
+	}
+	d.push_back(0);
+	mu.push_back(0);
+	lambda.push_back(0);
+
+	//Nebendiagonale eliminieren
+	mu[0] = 2;
+	for (int i = 1; i <= x.size()-1; i++) {
+		float f = (-1) * mu[i] / mu[i - 1];
+		mu[i] = 2 + f * lambda[i - 1];
+		d[i] = d[i] + f * d[i - 1];
+	}
+
+	//Rücksubstitutuion
+	vector<float>M;
+	for (int i = 0; i < x.size() ; i++) {
+		M.push_back(d[i]/mu[i]);
+	}
+	for (int i = x.size() - 2; i >= 0; i--) {
+		M[i] = (d[i] - lambda[i] * M[i + 1]) / mu[i];
+	}
+
+	//splines erstellen
+	vector<float> alpha, beta, gamma, delta;
+	alpha = y;
+	//beta.push_back(0);
+	//gamma.push_back(0);
+	//delta.push_back(0);
+	for (int i = 0; i <= y.size() - 2; i++) {
+
+		beta.push_back(((y[i + 1] - y[i]) / (x[i + 1] - x[i])) - (2 * M[i] + M[i + 1]) * (x[i + 1] - x[i]) / (6));
+		gamma.push_back(M[i] / 2);
+		delta.push_back((M[i + 1] - M[i]) / (6 * (x[i + 1] - x[i])));
+	
+	}
+	//ausgabedatei erstellen
+	float xmin, xmax;
+	xmin = x[0];
+	xmax = x[x.size() - 1];
+	vector<float>x_spline, y_spline;
+	int j = 0;
+	for (int i = 0; i <= 299; i++) {
+		float x_temp = xmin + i * (xmax - xmin) / 300;
+		x_spline.push_back(x_temp);
+		//aktuelles intervall feststellen
+		while (x_temp > x[j+1]) {
+			j++;
+		}
+		float y_temp = alpha[j] + beta[j] * (x_temp - x[j]) + gamma[j]*(x_temp - x[j]) * (x_temp - x[j]) +delta[j]* (x_temp - x[j]) * (x_temp - x[j]) * (x_temp - x[j]); //TODO beta, gamm und delta müssen um eins länger sein.
+		y_spline.push_back(y_temp);
+	}
+	ofstream outfile;
+	outfile.open("a15-spline.csv");
+	outfile << "x, y, \n";
+	for (int i = 0; i <= x_spline.size() - 1; i++) {
+		outfile << x_spline[i] << ", " << y_spline[i] << ", \n";
+	}
+	outfile.close();
 }
+
 int value_of_roem(char c) {
 	if(c== 'M') {
 		return 1000;

@@ -1,21 +1,29 @@
 ﻿  Quelle.cpp
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(243,20): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(245,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(257,20): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(258,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(304,16): warning C4244: "Initialisierung": Konvertierung von "_Ty" in "int", möglicher Datenverlust
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(244,20): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(246,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(258,20): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(259,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(305,16): warning C4244: "Initialisierung": Konvertierung von "_Ty" in "int", möglicher Datenverlust
           with
           [
               _Ty=float
           ]
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(313,20): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(314,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(369,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(370,22): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(422,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(423,22): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(480,16): warning C4101: "temp": Unreferenzierte lokale Variable
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(167): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": e" wird zurückgegeben
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(181): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": res" wird zurückgegeben
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(446): warning C4715: "aufgabe13": Nicht alle Codepfade geben einen Wert zurück.
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(314,20): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(315,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(370,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(371,22): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(423,21): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(424,22): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(481,20): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(491,20): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(502,20): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(510,20): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(523,20): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(549,20): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(449,6): warning C4101: "test": Unreferenzierte lokale Variable
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(585,16): warning C4101: "temp": Unreferenzierte lokale Variable
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(168): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": e" wird zurückgegeben
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(182): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": res" wird zurückgegeben
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(553): warning C4715: "aufgabe15": Nicht alle Codepfade geben einen Wert zurück.
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(447): warning C4715: "aufgabe13": Nicht alle Codepfade geben einen Wert zurück.
   Blatt2.vcxproj -> C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Debug\Blatt2.exe
