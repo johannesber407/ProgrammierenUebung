@@ -24,6 +24,6 @@ C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2
 C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(585,16): warning C4101: "temp": Unreferenzierte lokale Variable
 C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(168): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": e" wird zurückgegeben
 C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(182): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts ": res" wird zurückgegeben
-C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(553): warning C4715: "aufgabe15": Nicht alle Codepfade geben einen Wert zurück.
 C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(447): warning C4715: "aufgabe13": Nicht alle Codepfade geben einen Wert zurück.
+C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Blatt2\Quelle.cpp(553): warning C4715: "aufgabe15": Nicht alle Codepfade geben einen Wert zurück.
   Blatt2.vcxproj -> C:\Users\jb\OneDrive\Dokumente\GitHub\ProgrammierenUebung\Uebungsblaetter\Debug\Blatt2.exe

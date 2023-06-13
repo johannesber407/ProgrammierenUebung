@@ -604,6 +604,103 @@ void aufgabe16() {
 	
 	return;
 }
+void swap(char& a, char& b)
+{
+	char c = b;
+	b = a;
+	a = c;
+}
+
+bool next_permutation(char wort[], int size) {
+
+	// P1
+	int k = size - 2;
+	while (wort[k] >= wort[k + 1])
+	{
+		k--;
+		if (k < 0)
+		{
+			return false;
+		}
+	}
+
+	// P2
+	int l = size - 1;
+	while (wort[k] >= wort[l])
+	{
+		l--;
+	}
+
+	// P3
+	swap(wort[k], wort[l]);
+
+	// P4
+	int start = k + 1;
+	int end = size - 1;
+	int difference = (end - start) / 2;
+	for (int i = 0; i <= difference; i++)
+	{
+		swap(wort[start + i], wort[end - i]);
+	}
+	return true;
+}
+int aufgabe17(){
+	// Beispieldatensatz, muss sortiert vorliegen
+	const int size = 6;
+	char wort[size] = { 'A','E','E','F','F','K' };
+
+	cout << "Generierung aller Permutationen" << endl << endl;
+
+	// Hauptschleife, erzeuge alle Permutationen
+	int anzperm = 0;      // zaehle die Permutationen
+	do
+	{
+		++anzperm;
+		cout << "Nr: " << anzperm << "  ";
+		for (int i = 0; i < size; i++)
+			cout << wort[i] << " ";
+		cout << endl;
+	} while (next_permutation(wort, size));
+
+	cout << "Anzahl der Permutationen: " << anzperm << endl;
+
+	return 0;
+}
+
+
+
+struct minsek {
+	int min;
+	int sek;
+};
+
+struct minsek eingabeZeit()
+{
+	struct minsek time;
+	cout << "Bitte Minutenzahl eingeben: ";
+	cin >> time.min;
+	cout << "Bitte Sekundenzahl eingeben: ";
+	cin >> time.sek;
+	return time;
+}
+void printTime(struct minsek time) {
+	cout << setfill('0')<<  "Die Zeit ist " << setw(2) << time.min << ":" << setw(2) << time.sek << "." << endl;
+}
+struct minsek addTime(struct minsek timeA, struct minsek timeB) {
+	struct minsek res;
+	res.min = timeA.min + timeB.min + ((timeA.sek + timeB.sek) - (timeA.sek + timeB.sek) % 60) / 60;
+	res.sek = (timeA.sek + timeB.sek) % 60;
+	return res;
+}
+int aufgabe18() {
+	struct minsek timeA = eingabeZeit();
+	struct minsek timeB = eingabeZeit();
+	struct minsek res = addTime(timeA, timeB);
+	printTime(res);
+	
+	return 0;
+	
+}
 
 int main() {
 	while (true) {
@@ -643,6 +740,13 @@ int main() {
 			break;
 		case(16):
 			aufgabe16();
+			break;
+		
+		case(17):
+			aufgabe17();
+			break;
+		case(18):
+			aufgabe18();
 			break;
 		}
 	}
