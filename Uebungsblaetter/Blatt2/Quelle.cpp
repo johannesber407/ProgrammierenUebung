@@ -701,6 +701,12 @@ int aufgabe18() {
 	return 0;
 	
 }
+void aufgabe20() {
+
+}
+void aufgabe21() {
+
+}
 
 int main() {
 	while (true) {
@@ -747,6 +753,12 @@ int main() {
 			break;
 		case(18):
 			aufgabe18();
+			break;
+		case(20):
+			aufgabe20();
+			break;
+		case(21):
+			aufgabe21();
 			break;
 		}
 	}
